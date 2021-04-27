@@ -1,5 +1,6 @@
 FROM fastdotai/fastai
 
+RUN apt-get update -y && apt-get install -y unzip vim
 # Installing mc
 
 RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/local/bin/mc && \
@@ -7,7 +8,7 @@ RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/local/bin/mc
 
 # Installing vault
 
-RUN apt-get install -y unzip
+
 RUN cd /usr/bin && \
     wget https://releases.hashicorp.com/vault/1.3.4/vault_1.3.4_linux_amd64.zip && \
     unzip vault_1.3.4_linux_amd64.zip && \
