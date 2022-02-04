@@ -1,7 +1,7 @@
 FROM fastdotai/fastai
 
 RUN apt-get update -y && \ 
-    apt-get install -y wget unzip vim ca-certificates-java && \
+    apt-get install -y wget curl unzip vim ca-certificates-java && \
     update-ca-certificates
     
 # Installing mc
