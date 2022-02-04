@@ -1,4 +1,4 @@
-FROM fastdotai/fastai
+FROM fastdotai/fastai:2.2.5
 
 RUN apt-get update -y && \ 
     apt-get install -y wget curl unzip vim ca-certificates-java && \
